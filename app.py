@@ -1,4 +1,4 @@
-import streamlit as st
+rimport streamlit as st
 import pathlib
 import textwrap
 from IPython.display import Markdown
@@ -42,9 +42,15 @@ model = genai.GenerativeModel('gemini-pro')
 title = "Research Paper Summarizer"
 st.set_page_config(page_title=title, layout='centered')
 st.title(title)
-st.caption("A gemini powered Research Papers Summarizer!")
+st.subheader("A gemini powered Research Papers Summarizer!",divider='rainbow')
 file = st.file_uploader("Upload a Research Paper in .pdf extension", type="pdf",  accept_multiple_files=False)
 summary_or_explore = st.radio("Choose an option:", ("Summarize", "Explore"))
+with st.sidebar:
+  
+    st.title('Contributors')
+
+    # Adding content to the sidebar
+    st.write('Sidra Tul Muntaha') 
 
 if file is not None:
     text = etfp(file)
