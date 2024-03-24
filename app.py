@@ -52,11 +52,11 @@ with st.sidebar:
     # Adding content to the sidebar
     st.write('''
                 Aref\n
-                Ayesha Mehboob
-                Mudassar Rehman
-                Muhammad Qasim
-                Sidra Tul Muntaha
-                Sudha Sanjeevani
+                Ayesha Mehboob\n
+                Mudassar Rehman\n
+                Muhammad Qasim\n
+                Sidra Tul Muntaha\n
+                Sudha Sanjeevani\n
                 ''')
 
 if file is not None:
