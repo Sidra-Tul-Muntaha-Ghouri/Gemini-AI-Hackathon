@@ -2,9 +2,11 @@
 
 This project is for Lablab ai Gemini Hackathon
 
+![Gemini Logo](https://github.com/Sidra-Tul-Muntaha-Ghouri/Gemini-AI-Hackathon/blob/main/Cover_photo.jpeg)
+
 # Research Paper Summarizer
 
-A Gemini-powered Research Papers Summarizer!
+A Gemini-powered application for Summarizing Research Papers!
 
 ## Overview
 
@@ -41,6 +43,18 @@ This project aims to provide a convenient tool for summarizing research papers. 
 
    ```sh
    streamlit run app.py
+
+##Code Formatting
+The code is formatted using [Code Beautify](https://codebeautify.org/python-formatter-beautifier#).
+
+## Team Members
+
+-
+-
+-
+-
+-
+-
 
 ## License 📄
 
