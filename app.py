@@ -51,7 +51,7 @@ with st.sidebar:
 
     # Adding content to the sidebar
     st.write('''
-                Aref
+                Aref\n
                 Ayesha Mehboob
                 Mudassar Rehman
                 Muhammad Qasim
