@@ -1,7 +1,8 @@
 # Gemini-AI-Hackathon
-# Research Paper Summarizer
 
-![Gemini Logo](https://example.com/gemini_logo.png)
+This project is for Lablab ai Gemini Hackathon
+
+# Research Paper Summarizer
 
 A Gemini-powered Research Papers Summarizer!
 
@@ -15,7 +16,7 @@ This project aims to provide a convenient tool for summarizing research papers. 
 - Explore research papers by asking questions
 - Powered by Google's Generative AI (Gemini)
 
-## Installation
+## Installation and Setup 🛠️
 
 1. Clone the repository:
 
@@ -40,3 +41,13 @@ This project aims to provide a convenient tool for summarizing research papers. 
 
    ```sh
    streamlit run app.py
+
+## License 📄
+
+This project is licensed under the MIT License.
+
+## Acknowledgements 🙌
+- Gemini-pro,
+- PyMuPdf
+
+  
