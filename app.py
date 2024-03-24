@@ -50,7 +50,14 @@ with st.sidebar:
     st.title('Team Members')
 
     # Adding content to the sidebar
-    st.write('Aref\nAyesha Mehboob\nMudassar Rehman\nMuhammad Qasim\nSidra Tul Muntaha\nSudha Sanjeevani\n ') 
+    st.write('''
+                Aref
+                Ayesha Mehboob
+                Mudassar Rehman
+                Muhammad Qasim
+                Sidra Tul Muntaha
+                Sudha Sanjeevani
+                ''')
 
 if file is not None:
     text = etfp(file)
