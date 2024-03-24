@@ -46,7 +46,7 @@ This project aims to provide a convenient tool for summarizing research papers. 
    ```sh
    streamlit run app.py
 
-##Code Formatting
+## Code Formatting
 The code is formatted using [Code Beautify](https://codebeautify.org/python-formatter-beautifier#).
 
 ## Team Members
