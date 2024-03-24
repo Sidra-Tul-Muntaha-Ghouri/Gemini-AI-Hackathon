@@ -5,7 +5,7 @@ from IPython.display import Markdown
 import google.generativeai as genai
 import fitz
 
-GOOGLE_API_KEY = "AIzaSyAPCNF5QCt9i-VKunDwMDbXSyqZpMhPv38"
+GOOGLE_API_KEY = "GOOGLE_API_KEY"
 genai.configure(api_key=GOOGLE_API_KEY)
 
 def to_markdown(text):
