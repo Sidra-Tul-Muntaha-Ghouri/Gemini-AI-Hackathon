@@ -1,4 +1,4 @@
-rimport streamlit as st
+import streamlit as st
 import pathlib
 import textwrap
 from IPython.display import Markdown
