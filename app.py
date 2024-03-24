@@ -47,7 +47,7 @@ file = st.file_uploader("Upload a Research Paper in .pdf extension", type="pdf",
 summary_or_explore = st.radio("Choose an option:", ("Summarize", "Explore"))
 with st.sidebar:
   
-    st.title('Contributors')
+    st.title('Team Members')
 
     # Adding content to the sidebar
     st.write('Sidra Tul Muntaha') 
