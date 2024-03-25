@@ -7,9 +7,9 @@ from uuid import uuid4
 import io
 
 # Initialize and configure the environment
-load_dotenv(".env")
-fetched_api_key = io.open(".env").read() 
-genai.configure(api_key=fetched_api_key)
+with open('config.json', 'r') as file:
+    config = json.load(file)
+    GOOGLE_API_KEY = config['api_key']
 model = genai.GenerativeModel("gemini-pro")  # Ensure correct model name
 
 def process_pdf(uploaded_file):
