@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 import google.generativeai as genai
 from uuid import uuid4
 import io
+import json
 
 # Initialize and configure the environment
 with open('config.json', 'r') as file:
