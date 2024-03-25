@@ -5,8 +5,16 @@ from IPython.display import Markdown
 import google.generativeai as genai
 import fitz
 import PyPDF2
+import pytesseract
+from PIL import Image
+import json
+import io
 
-GOOGLE_API_KEY = "AIzaSyAPCNF5QCt9i-VKunDwMDbXSyqZpMhPv38"
+
+with open('config.json', 'r') as file:
+    config = json.load(file)
+    GOOGLE_API_KEY = config['api_key']
+
 genai.configure(api_key=GOOGLE_API_KEY)
 
 def to_markdown(text):
@@ -15,15 +23,25 @@ def to_markdown(text):
 
 def etfp(file): # function to extract text from pdf
     text = ''
-    #with fitz.open(pdf_file) as pdf_document:
-    #   for page_num in range(len(pdf_document)):
-    #        page = pdf_document.load_page(page_num)
-    #       text += page.get_text()
-    
-    pdf_reader = PyPDF2.PdfReader(file)
-    for page_num in range(len(pdf_reader.pages)):
-        page = pdf_reader.pages[page_num]
-        text += page.extract_text()
+    if file.type == 'application/pdf':
+        pdf_reader = PyPDF2.PdfReader(file)
+        for page_num in range(len(pdf_reader.pages)):
+            page = pdf_reader.pages[page_num]
+            text += page.extract_text()
+    else:  # Handle scanned PDFs using OCR
+        images = []
+        with fitz.open(io.BytesIO(file.read())) as pdf_document:
+            for page_num in range(len(pdf_document)):
+                page = pdf_document.load_page(page_num)
+                image_list = page.get_images(full=True)
+                for img in image_list:
+                    xref = img[0]
+                    base_image = pdf_document.extract_image(xref)
+                    image_bytes = base_image["image"]
+                    image = Image.open(io.BytesIO(image_bytes))
+                    images.append(image)
+        for image in images:
+            text += pytesseract.image_to_string(image)
     return text
 
 def summarize(text, model):
