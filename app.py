@@ -4,6 +4,7 @@ import textwrap
 from IPython.display import Markdown
 import google.generativeai as genai
 import fitz
+import PyPDF2
 
 GOOGLE_API_KEY = "AIzaSyAPCNF5QCt9i-VKunDwMDbXSyqZpMhPv38"
 genai.configure(api_key=GOOGLE_API_KEY)
@@ -12,12 +13,17 @@ def to_markdown(text):
     text = text.replace('•', '  *')
     return Markdown(textwrap.indent(text, '> ', predicate=lambda _: True))
 
-def etfp(pdf_file): # function to extract text from pdf
+def etfp(file): # function to extract text from pdf
     text = ''
-    with fitz.open(pdf_file) as pdf_document:
-        for page_num in range(len(pdf_document)):
-            page = pdf_document.load_page(page_num)
-            text += page.get_text()
+    #with fitz.open(pdf_file) as pdf_document:
+    #   for page_num in range(len(pdf_document)):
+    #        page = pdf_document.load_page(page_num)
+    #       text += page.get_text()
+    
+    pdf_reader = PyPDF2.PdfReader(file)
+    for page_num in range(len(pdf_reader.pages)):
+        page = pdf_reader.pages[page_num]
+        text += page.extract_text()
     return text
 
 def summarize(text, model):
