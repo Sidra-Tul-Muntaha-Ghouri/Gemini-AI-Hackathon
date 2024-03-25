@@ -12,3 +12,4 @@ streamlit-lottie
 python-dotenv
 Pillow
 pytesseract
+pdfplumber
