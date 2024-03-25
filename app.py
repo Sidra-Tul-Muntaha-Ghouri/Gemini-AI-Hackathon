@@ -30,12 +30,12 @@ def explore(text, question, model):
     result = exp.text
     return result
 
-def delete_uploaded_file(file_path):
-    if pathlib.Path(file_path).exists():
-        pathlib.Path(file_path).unlink()
-        return True
-    else:
-        return False
+#def delete_uploaded_file(file_path):
+#    if pathlib.Path(file_path).exists():
+#        pathlib.Path(file_path).unlink()
+#        return True
+#    else:
+#        return False
 
 model = genai.GenerativeModel('gemini-pro')
 
