@@ -10,4 +10,5 @@ IPython
 PyPDF2
 streamlit-lottie
 python-dotenv
-
+Pillow
+pytesseract
