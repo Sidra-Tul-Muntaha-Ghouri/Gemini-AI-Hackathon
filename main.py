@@ -8,9 +8,9 @@ from streamlit_lottie import st_lottie
 from dotenv import load_dotenv
 
 # ------------------------ API KEY SETUP ------------------------
-load_dotenv(".env")
-fetched_api_key = os.getenv("API_KEY")
-genai.configure(api_key=fetched_api_key)
+#load_dotenv(".env")
+#fetched_api_key = os.getenv("API_KEY")
+genai.configure(api_key="AIzaSyAPCNF5QCt9i-VKunDwMDbXSyqZpMhPv38")
 model = genai.GenerativeModel("gemini-pro")  # Adapt model name if needed
 chat = model.start_chat()
 
