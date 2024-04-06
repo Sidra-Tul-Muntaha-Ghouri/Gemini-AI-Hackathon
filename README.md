@@ -49,15 +49,6 @@ This project aims to provide a convenient tool for summarizing research papers. 
 ## Code Formatting
 The code is formatted using [Code Beautify](https://codebeautify.org/python-formatter-beautifier#).
 
-## Team Members
-
--
--
--
--
--
--
-
 ## License 📄
 
 This project is licensed under the MIT License.
