@@ -69,19 +69,6 @@ st.title(title)
 st.subheader("A gemini powered Research Papers Summarizer!",divider='rainbow')
 file = st.file_uploader("Upload a Research Paper in .pdf extension", type="pdf",  accept_multiple_files=False)
 summary_or_explore = st.radio("Choose an option:", ("Summarize", "Explore"))
-with st.sidebar:
-  
-    st.title('Team Members')
-
-    # Adding content to the sidebar
-    st.write('''
-                Aref\n
-                Ayesha Mehboob\n
-                Mudassar Rehman\n
-                Muhammad Qasim\n
-                Sidra Tul Muntaha\n
-                Sudha Sanjeevani\n
-                ''')
 
 if file is not None:
     text = etfp(file)
